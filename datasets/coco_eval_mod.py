@@ -479,7 +479,7 @@ class COCOeval:
             
             return mean_s
         
-        def _summarizeDets():
+        def _summarizeDets(categoryId=None):
             stats = np.zeros((12,))
             stats[0] = _summarize(1, categoryId=categoryId)
             stats[1] = _summarize(1, iouThr=.5, maxDets=self.params.maxDets[2], categoryId=categoryId)
